@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Escáner Flotante</string>
+    <string name="servicio_nombre">Escáner Flotante</string>
+    <string name="servicio_descripcion">Muestra un botón flotante. Al tocarlo abre una ventanita con la cámara, lee el código de barras y lo escribe en el campo de texto donde estabas, en cualquier app. La app solo usa este permiso para escribir el código; no lee ni guarda lo que hacés en otras apps.</string>
+    <string name="escanear">Escanear código</string>
+</resources>

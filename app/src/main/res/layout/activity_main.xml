@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Un botón flotante que escanea códigos de barras y los escribe en cualquier app (planillas, sistemas de pedidos, WhatsApp, navegador...)."
+            android:textSize="15sp" />
+
+        <!-- PASO 1 -->
+        <TextView
+            style="@style/Titulo"
+            android:text="1. Permiso de cámara" />
+
+        <TextView
+            android:id="@+id/estadoCamara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/botonCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dar permiso de cámara" />
+
+        <!-- PASO 2 -->
+        <TextView
+            style="@style/Titulo"
+            android:text="2. Activar el botón flotante" />
+
+        <TextView
+            android:id="@+id/estadoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="En Ajustes → Accesibilidad buscá «Escáner Flotante» (a veces está dentro de «Apps instaladas» o «Servicios descargados») y activalo."
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/botonAccesibilidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abrir Accesibilidad" />
+
+        <TextView
+            android:id="@+id/avisoRestringido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="¿Aparece gris o dice «Ajuste restringido»? Android lo bloquea en apps que no vienen de Play Store. Tocá el botón de abajo, después los 3 puntitos (⋮) arriba a la derecha → «Permitir ajustes restringidos», y volvé a intentar."
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/botonInfoApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abrir info de la app" />
+
+        <!-- AJUSTES -->
+        <TextView
+            style="@style/Titulo"
+            android:text="Ajustes" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchBurbuja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Mostrar botón flotante"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Después de escribir el código:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/grupoAccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/accionNada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp"
+                android:text="No hacer nada" />
+
+            <RadioButton
+                android:id="@+id/accionEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp"
+                android:text="Apretar Enter (confirmar / buscar)" />
+
+            <RadioButton
+                android:id="@+id/accionSiguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp"
+                android:text="Pasar al siguiente campo" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchVibrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:text="Vibrar al leer"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSonido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Pitido al leer"
+            android:textSize="16sp" />
+
+        <!-- PRUEBA -->
+        <TextView
+            style="@style/Titulo"
+            android:text="Probalo acá" />
+
+        <EditText
+            android:id="@+id/campoPrueba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tocá acá y después el botón flotante"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Consejos: arrastrá el botón para moverlo. Mantenelo apretado para abrir esta pantalla. Si no hay un campo seleccionado, el código se copia y lo podés pegar."
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
