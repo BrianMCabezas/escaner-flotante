@@ -10,7 +10,7 @@ Desde el celular, abrí este link y descargá el APK:
 
 **Releases → última versión → `EscanerFlotante.apk`**
 
-(Link directo: `https://github.com/USUARIO/REPO/releases/latest/download/EscanerFlotante.apk`)
+(Link directo: `https://github.com/BrianMCabezas/escaner-flotante/releases/latest/download/EscanerFlotante.apk`)
 
 ## Instalar y configurar
 
